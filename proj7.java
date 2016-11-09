@@ -8,6 +8,7 @@ public class proj7 {
         boolean hasGold = false;
         boolean killedWumpus = false;
         do {
+            b.updatePosition();
             boolean isThereGold = b.goldAround();
             if (isThereGold == true) {
                 v.printGold();
@@ -22,15 +23,16 @@ public class proj7 {
             }
             char move = v.printFirstMove();
             char direction = v.printSecondMove();
+            b.updatePosition();
             //So I have the move that is wanted and the direction that is wanted
             //I need to send it to get checked based on what each one of them are.
-            if (move == "m" || move == "M") {
+            if (move == 'm' || move == 'M') {
                 boolean validMove = b.move(direction);
                 if (validMove == false) {
                     v.printNonValidMove();
                 }
             }
-            if (move == "s" || move == "S") {
+            if (move == 's' || move == 'S') {
                 boolean isThereArrow = b.checkForArrow();
                 if (isThereArrow == true) {
                     boolean validShot = b.shootArrow(direction);
@@ -43,7 +45,7 @@ public class proj7 {
                     v.printNoArrow();
                 }
             }
-            if (move == "c" || move == "C") {
+            if (move == 'c' || move == 'C') {
                 boolean atCave = b.atCave();
                 if (atCave == true) {
                     b.climbOut();
@@ -54,7 +56,7 @@ public class proj7 {
                     v.printNotAtCave();
                 }
             }
-            if (move == "g" || move == "G") {
+            if (move == 'g' || move == 'G') {
                 boolean atGold = b.atGold();
                 if (atGold == true) {
                     b.getGold();
@@ -64,6 +66,7 @@ public class proj7 {
                     v.printNotAtGold();
                 }
             }
+            b.updatePosition();
         }
         while (game = 0);
     }

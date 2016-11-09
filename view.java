@@ -8,13 +8,15 @@ public class view {
   }
   public char printFirstMove() {
       System.out.println("Enter (m)ove, (s)hoot, (g)rab, or (c)limb: ");
-      char playerFirstMove = char.parseChar(s.nextLine());
+      String playerFirstMoveString = s.nextLine();
+      char playerFirstMove = (char)playerFirstMoveString;
       return playerFirstMove;
       //It returns the char and sends it to the MM to send to board
   }
   public char printSecondMove() {
       System.out.println("Enter (u)p, (d)own, (l)eft, or (r)ight: ");
-      char playerSecondMove = char.parseChar(s.nextLine());
+      String playerSecondMoveString = s.nextLine();
+      char playerSecondMove = (char)playerSecondMoveString;
       return playerSecondMove;
   }
   public void printNonValidMove() {

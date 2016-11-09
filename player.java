@@ -14,16 +14,16 @@ public class player {
 	}
 	public void move(char direction) {
 		//Make the main method check for validity of the moves not here.
-		if (direction == "u" || direction == "U") {
+		if (direction == 'u' || direction == 'U') {
 			rowPosition = rowPosition - 1;
 		}
-		if (direction == "d" || direction == "D") {
+		if (direction == 'd' || direction == 'D') {
 			rowPosition = rowPosition + 1;
 		}
-		if (direction == "l" || direction == "L") {
+		if (direction == 'l' || direction == 'L') {
 			colPosition = colPosition - 1;
 		}
-		if (direction == "r" || direction == "R") {
+		if (direction == 'r' || direction == 'R') {
 			colPosition = colPosition + 1;
 		}
 	}
